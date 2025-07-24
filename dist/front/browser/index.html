@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr" data-beasties-container>
+<head>
+  <meta charset="utf-8">
+  <title>Post'Hit</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-signin-client_id" content="220247244335-eu66pg82ffgefo7o235tg2dateq4g4bi.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/x-icon" href="post_hit_logo.ico">
+<style>:root{--color-black:#111111;--color-white:#e9e9e9;--color-gray-light:#e5e5e5;--color-gray-dark:#222222;--color-accent:#ff3c00;--font-title:"Montserrat", "Oswald", "Asap", Arial, sans-serif;--font-body:"Asap", Arial, sans-serif;--color-primary:#7b2ff2;--color-secondary:#f357a8;--color-accent:#ffb86c;--color-bg:#fff;--color-text:#222;--color-link:#7b2ff2;--color-link-hover:#f357a8;--shadow:0 4px 24px rgba(60, 30, 90, .08);--radius:18px}body{font-family:var(--font-body);background:var(--color-white);color:var(--color-black);min-height:100vh;display:flex;flex-direction:column;position:relative;overflow-x:hidden}@media (max-width: 679px){html{overflow-x:hidden}}@font-face{font-family:Asap;src:local("Asap"),url(/font/Asap/Asap-Italic-VariableFont_wdth,wght.ttf) format("TrueType"),url(/font/Asap/Asap-VariableFont_wdth,wght.ttf) format("TrueType")}*{margin:0;padding:0}</style><link rel="stylesheet" href="styles-VTDFQMRA.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-VTDFQMRA.css"></noscript></head>
+<body>
+  <app-root></app-root>
+
+  <script>
+    function handleCredentialResponse(response) {
+      // Tu peux traiter la réponse ici ou dans Angular
+      console.log("Google credential response", response);
+    }
+    window.onload = function() {
+      if (window.google && window.google.accounts && window.google.accounts.id) {
+        window.google.accounts.id.initialize({
+          client_id: "220247244335-eu66pg82ffgefo7o235tg2dateq4g4bi.apps.googleusercontent.com",
+          callback: handleCredentialResponse
+        });
+        document.querySelectorAll('.g_id_signin').forEach(function(el) {
+          window.google.accounts.id.renderButton(
+            el,
+            { theme: "outline", size: "large" }
+          );
+        });
+      }
+    }
+  </script>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-TTMC5TH4.js" type="module"></script></body>
+</html>
